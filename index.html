@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#FAF5EE" />
+
+  <title>Widya — Your Bali life, handled.</title>
+  <meta name="description" content="WhatsApp concierge for Bali expats. Bike service, doctor appointments, restaurant bookings, household repairs. One bill, IDR 699K/month." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://widya.co/" />
+  <meta property="og:title" content="Widya — Your Bali life, handled." />
+  <meta property="og:description" content="WhatsApp concierge for Bali expats. One bill, IDR 699K/month." />
+  <meta property="og:image" content="https://widya.co/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Widya — Your Bali life, handled." />
+  <meta name="twitter:description" content="WhatsApp concierge for Bali expats. One bill, IDR 699K/month." />
+  <meta name="twitter:image" content="https://widya.co/og-image.png" />
+
+  <link rel="canonical" href="https://widya.co/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23D17B5E'/%3E%3Ctext x='50%25' y='56%25' font-family='Geist, system-ui' font-size='34' font-weight='600' fill='%23FAF5EE' text-anchor='middle' dominant-baseline='middle'%3Ew%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ICON SPRITE — inlined so no extra request per icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <symbol id="i-bike" viewBox="0 0 64 64">
+      <path d="M 53.6 50.2 C 53.2 53.4 50.4 55.7 47.4 55.4 C 44 55 41.6 51.8 42.1 48.5 C 42.6 45.4 45.6 43.2 48.7 43.7 C 51.8 44.3 54 47.2 53.6 50.2"/>
+      <path d="M 47.5 47.8 C 48.2 47.8 48.8 48.4 48.7 49.2"/>
+      <path d="M 21.4 50.2 C 21 53.4 18 55.7 15 55.3 C 11.7 54.9 9.3 51.7 9.8 48.5 C 10.3 45.4 13.3 43.2 16.4 43.7 C 19.5 44.3 21.8 47.2 21.4 50.2"/>
+      <path d="M 15.4 47.8 C 16.1 47.8 16.7 48.4 16.6 49.2"/>
+      <path d="M 14 21.5 L 23.5 20"/>
+      <path d="M 19 21 C 19.5 25 21 28.5 23 32 C 24.5 35 25 38 24 41 C 23.5 42.5 23 43.2 22.6 43.4"/>
+      <path d="M 23 43 C 28.5 42.7 33.5 42.7 38.5 43"/>
+      <path d="M 38.5 43 C 38.8 39 41.5 36 45.5 35.2 C 49.5 34.5 53.2 35.5 54.6 37.8 C 55.4 39.6 55.6 41.8 55 43.6"/>
+      <path d="M 51 35.8 C 53 35 55 34.8 57 35.4"/>
+      <path d="M 6.5 27 C 6.2 30.5 6 35 6.3 39 L 16 39 C 16 35 16 31 16 27.5 Z"/>
+      <path d="M 9 30.5 L 9.2 36.5"/><path d="M 12.5 30.5 L 12.7 36.5"/><path d="M 7 31.5 L 15.5 31.8"/>
+      <path d="M 19 20 L 19.3 14"/>
+      <path d="M 17 13.8 C 17 12.5 18 12 19.3 12 C 20.5 12 21.6 12.6 21.5 13.8 C 21.4 14.5 20.7 15 19.5 15"/>
+    </symbol>
+    <symbol id="i-health" viewBox="0 0 64 64">
+      <path d="M 22 11 C 19.5 10.5 17 11 16.5 13"/>
+      <path d="M 38 11 C 40.5 10.5 43 11 43.5 13"/>
+      <path d="M 17 13.5 C 16.5 18 18 22 22 24 C 25 25.5 27 26.5 28 28"/>
+      <path d="M 43 13.5 C 43.5 18 41 22 36.5 23.5 C 32 25 30 26 29 28"/>
+      <path d="M 28.5 28.5 C 27 33 26 37 28 41 C 30 45 34 47 38 47.5"/>
+      <path d="M 38 47.5 L 41 48"/>
+      <path d="M 53.5 49 C 53.2 52 50.7 54.2 47.5 54 C 44.5 53.8 42.2 51.2 42.4 48.4 C 42.6 45.5 45.2 43.3 48.2 43.5 C 51.3 43.7 53.7 46.2 53.5 49 Z"/>
+      <path d="M 50.5 49.4 C 50.2 50.7 49 51.6 47.5 51.5"/>
+    </symbol>
+    <symbol id="i-home" viewBox="0 0 64 64">
+      <g transform="rotate(-28 32 32)">
+        <path d="M 8 33.5 C 5.5 33.5 5 29.5 8 29.4 L 41 28.5 L 41 21 L 56 21 L 56 28 L 47 28 L 47 36 L 56 36 L 56 43 L 41 43 L 41 35.2 Z"/>
+        <path d="M 49 28 L 49 24"/><path d="M 49 36 L 49 40"/>
+      </g>
+      <path d="M 8.5 56 C 13 55.7 17 55.7 21 56"/>
+    </symbol>
+    <symbol id="i-food" viewBox="0 0 64 64">
+      <path d="M 48 30 C 48 35 41 38.5 31.5 38.5 C 22.5 38.5 16 35 16 30 C 16 25 22.5 21.5 32 21.5 C 41 21.5 48 25 48 30 Z"/>
+      <path d="M 19 28.5 C 20 25.5 25 23.5 30 23"/>
+      <path d="M 7.5 9 L 7.6 18"/><path d="M 10 9 L 10 18"/><path d="M 12.5 9 L 12.4 18"/>
+      <path d="M 7 18 C 7 20 7.5 21.5 9 22 L 11 22 C 12.5 21.5 13 20 13 18"/>
+      <path d="M 9 22 C 8.8 24 8.6 26 8.8 28"/><path d="M 11 22 C 11.2 24 11.4 26 11.2 28"/>
+      <path d="M 8.8 28 C 8.6 38 8.6 48 9 53"/><path d="M 11.2 28 C 11.4 38 11.4 48 11 53"/>
+      <path d="M 9 53 C 9 55 11 55 11 53"/>
+      <path d="M 52 8.5 C 50.5 8.5 49.5 10 49.5 12 L 49.5 26 L 56 26 L 56 12 C 56 10 55 9 53.5 8.7 Z"/>
+      <path d="M 49.5 26 L 49.5 28 L 56 28 L 56 26"/>
+      <path d="M 50 28 C 49.8 38 49.8 48 50 53"/><path d="M 55.5 28 C 55.7 38 55.7 48 55.5 53"/>
+      <path d="M 50 53 C 50 55 55.5 55 55.5 53"/>
+    </symbol>
+    <symbol id="i-wellness" viewBox="0 0 64 64">
+      <path d="M 32 26 C 29 22 28 16 30 11 C 31 9.5 33 9.5 34.5 11 C 36.5 16 35.5 22 32.5 26"/>
+      <path d="M 34 27 C 38.5 25 43.5 22.5 48 23 C 49.7 23.2 50 25 49 26.5 C 45.5 31 39.5 32.5 34.5 30.5"/>
+      <path d="M 35 31 C 38 33.5 41 37 41.5 41.5 C 41.6 43 40.2 44 38.5 43.3 C 34 41.5 31.7 36.5 31.7 32.5"/>
+      <path d="M 30 32 C 26 36 21.5 39 17 39 C 15.5 38.8 15 37 16 35.5 C 19 30.5 24.5 29 29 29.5"/>
+      <path d="M 29.5 27 C 25 24.5 21 21 19.5 17 C 19.2 15.5 20.5 14.2 22.2 14.7 C 27 16.5 30 21 30.5 25.5"/>
+      <path d="M 32 29 C 32.6 28.7 33.3 29 33.2 29.7 C 33.1 30.5 32.2 30.7 31.7 30.3 C 31.3 30 31.5 29.2 32 29 Z"/>
+      <path d="M 38 43 C 41 47 44 51 46 55"/>
+      <path d="M 42 50 C 46 49 50 50.5 52 53 C 49.5 53.6 46 53.4 43.5 51.5"/>
+      <path d="M 44 50.3 C 47 51 49.5 52 51 53"/>
+    </symbol>
+    <symbol id="i-family" viewBox="0 0 64 64">
+      <path d="M 19 14 C 19 16 17.5 17.5 15.5 17.5 C 13.5 17.5 12 16 12 14 C 12 12 13.5 10.5 15.5 10.5 C 17.5 10.5 19 12 19 14 Z"/>
+      <path d="M 15.5 18 C 16 22 16.5 26 17 32"/>
+      <path d="M 14 19 C 13 23 13 28 13.5 32"/>
+      <path d="M 15 32 C 13.5 38 11 44 9 51"/>
+      <path d="M 16 32 C 17.5 37 18 41 17.5 47"/>
+      <path d="M 14 22 C 11.5 25 10 28 9.5 31"/>
+      <path d="M 17 22 C 20 25 24 29 28 33"/>
+      <path d="M 28 33 L 31 34"/>
+      <path d="M 39 28 C 39 29.5 37.7 30.7 36.2 30.7 C 34.7 30.7 33.5 29.5 33.5 28 C 33.5 26.5 34.7 25.3 36.2 25.3 C 37.7 25.3 39 26.5 39 28 Z"/>
+      <path d="M 36 31 C 36 35 36 39 36 44"/>
+      <path d="M 34 32 C 33.5 35 33.5 39 34 44"/>
+      <path d="M 34 44 C 33 47 31.5 49.5 30 52"/>
+      <path d="M 36 44 C 36.5 47 37 49.5 38 52"/>
+      <path d="M 38 33 C 40 35 41 37 41.5 39"/>
+      <path d="M 34 33 L 31 34"/>
+    </symbol>
+    <symbol id="i-classes" viewBox="0 0 64 64">
+      <path d="M 32 46 L 11 47 L 16 24 L 32 26 Z"/>
+      <path d="M 32 46 L 53 47 L 48 24 L 32 26 Z"/>
+      <path d="M 32 26 C 31.5 33 31.5 39 32 46"/>
+      <path d="M 17.5 30 C 21 30 25 30.2 30 30.5"/>
+      <path d="M 18 34 C 22 34 26 34.2 30 34.5"/>
+      <path d="M 18.5 38 C 22 38 25 38.2 28 38.5"/>
+      <path d="M 19 42 C 22 42 25 42.2 27 42.5"/>
+      <path d="M 34 30.5 C 38 30.2 42 30 46.5 30"/>
+      <path d="M 34 34.5 C 38 34.2 42 34 46 34"/>
+      <path d="M 34 38.5 C 37 38.2 40 38 43 38"/>
+      <path d="M 50 41 L 53.5 47 L 47 44 Z"/>
+      <path d="M 53 47 C 54 47 54.5 46.6 54.5 46"/>
+    </symbol>
+    <symbol id="i-tech" viewBox="0 0 64 64">
+      <path d="M 24 7 C 21.5 7.4 20 9 19.8 11.5 L 17 51 C 16.8 53.5 18.4 55.2 21 55.4 L 41 56.5 C 43.5 56.6 45.4 54.9 45.5 52.5 L 47.5 13 C 47.6 10.5 46 8.8 43.5 8.6 Z"/>
+      <path d="M 28.5 11 C 30.5 11 33.5 11 35.5 11"/>
+      <path d="M 23 22 C 23 20 24.2 19 26.2 19 L 39 19.5 C 40.8 19.6 42 21 41.9 22.8 L 41.5 30 C 41.4 31.5 40 32.6 38.4 32.4 L 32 32 L 28 35.5 L 28.5 31.7 L 25 31.4 C 23.5 31.3 22.8 30 22.8 28.5 Z"/>
+      <path d="M 27 24 C 30 24 33 24.1 37 24.3"/>
+      <path d="M 27 27 C 29 27 31 27.1 33 27.3"/>
+      <path d="M 27 51.5 C 29 51.6 33 51.7 35 51.8"/>
+    </symbol>
+    <symbol id="i-events" viewBox="0 0 64 64">
+      <path d="M 9 22 L 22 22 L 23 19 L 34 19 L 35 22 L 55 22"/>
+      <path d="M 9 22 L 8.5 47 C 8.6 48.5 9.7 49.6 11 49.7 L 53 49.7 C 54.3 49.6 55.4 48.5 55.5 47 L 55 22"/>
+      <path d="M 38 35.5 C 37.7 41 33.2 45.3 27.7 45 C 22.4 44.7 18.4 40 18.7 34.7 C 19 29.4 23.7 25.4 29 25.7 C 34.3 26 38.3 30.3 38 35.5 Z"/>
+      <path d="M 33 35.5 C 32.8 38.6 30.1 40.9 27 40.7 C 24.1 40.5 21.9 38 22.1 35 C 22.3 32.1 24.8 29.9 27.7 30.1"/>
+      <path d="M 25.5 32 L 26.5 33"/>
+      <path d="M 42.5 28 L 49.5 28 L 49.5 33 L 42.5 33 Z"/>
+      <path d="M 47 19 L 47 16 L 51 16 L 51 19"/>
+      <path d="M 44 19 L 44 17"/>
+      <path d="M 11 22 L 11 24"/><path d="M 53 22 L 53 24"/>
+    </symbol>
+    <symbol id="i-admin" viewBox="0 0 64 64">
+      <path d="M 18 12 C 22 8 32 8 38 10 C 42 11.2 44 13 43.5 15 C 43 16.5 41 17 39 16"/>
+      <path d="M 19 13 C 19 22 19 32 19.5 44"/>
+      <path d="M 43.5 15.5 C 43.6 25 43.7 35 44 47"/>
+      <path d="M 23 22 C 27 21.8 33 21.8 36 22"/>
+      <path d="M 23 26 C 26 25.8 30 25.8 33 26"/>
+      <path d="M 23 30 C 28 29.8 35 29.8 40 30"/>
+      <path d="M 23 34 C 28 33.9 38 33.9 40.5 34"/>
+      <path d="M 23 38.5 C 25 38.4 27 38.4 28.5 38.5"/>
+      <path d="M 33 39 L 36 42 L 41 36.5"/>
+      <path d="M 19.5 44 L 22 47 L 25 44 L 28 47 L 31 44 L 34 47 L 37 44 L 40 47 L 44 44"/>
+    </symbol>
+    <symbol id="i-legal" viewBox="0 0 64 64">
+      <path d="M 13 11 C 13 9.5 14 8.5 15.5 8.4 L 43 8 L 50 14 C 50.3 24 50.5 42 50 53.5 C 49.9 55 48.8 56 47.3 56 L 14.5 55.5 C 13 55.5 12 54.5 12 53 Z"/>
+      <path d="M 43 8 L 43.5 14 L 50 14"/>
+      <path d="M 18 20 C 22 19.8 27 19.8 31 20"/>
+      <path d="M 18 22 C 22 21.8 27 21.8 31 22"/>
+      <path d="M 18 28 C 24 27.8 36 27.8 45 28"/>
+      <path d="M 18 32 C 24 31.8 36 31.8 44 32"/>
+      <path d="M 18 36 C 24 35.8 34 35.8 41 36"/>
+      <path d="M 18 47 C 19 45.5 20 45.5 20.5 47 C 21 48.5 22 48.5 23 47 C 24 45.5 25 45.5 26.5 47 C 27.5 48 28 48 29 47"/>
+      <path d="M 45.5 46.5 C 45.3 49 43.2 50.8 40.8 50.6 C 38.4 50.4 36.6 48.2 36.8 45.8 C 37 43.4 39.1 41.6 41.5 41.8 C 43.9 42 45.7 44.1 45.5 46.5 Z"/>
+      <path d="M 41.2 43.5 L 42 45.5 L 44 45.5 L 42.5 47 L 43 49 L 41.2 47.7 L 39.5 49 L 40 47 L 38.5 45.5 L 40.5 45.5 Z"/>
+    </symbol>
+    <symbol id="i-pets" viewBox="0 0 64 64">
+      <path d="M 36 19 C 35 14 36.5 10.5 39 11 C 41.5 12 42 16 40 19"/>
+      <path d="M 42 17 C 42.5 13 44 11 45.5 11.8 C 47 13 47 16 45.5 18"/>
+      <path d="M 36 19 C 36 17 38 17 40 17"/>
+      <path d="M 40 17 C 41 17 42 17 42 17.5"/>
+      <path d="M 45.5 18 C 47 19 49 21 50.5 23"/>
+      <path d="M 50.5 23 C 52 23.5 53.5 24 54.5 25.5"/>
+      <path d="M 54.5 25.5 C 54.7 26.5 54 27.2 53 27"/>
+      <path d="M 53 27 L 49.5 27.5"/>
+      <path d="M 49.5 27.5 C 47 28 45 28 43 28"/>
+      <path d="M 43 28 C 41.5 30 40.5 32.5 40 36"/>
+      <path d="M 40 36 C 40 40 40 44 40 48"/>
+      <path d="M 37 50 C 39 50.5 41.5 50.5 43 50"/>
+      <path d="M 40 48 C 40 49 40 49.5 40 50"/>
+      <path d="M 35 36 C 35 41 35 46 35 49.5"/>
+      <path d="M 32 50 C 34 50.5 35.5 50.5 37 50"/>
+      <path d="M 35 38 C 28 39 22 40 16 41"/>
+      <path d="M 16 41 C 11 41 9 37 10 32 C 11 27 14 25 18 25"/>
+      <path d="M 18 25 C 24 24 30 24 36 25"/>
+      <path d="M 12 47 C 12 50 13.5 50.5 15 50.5 L 22 50.5"/>
+      <path d="M 14 30 C 10 27 8 22 11 19 C 13 17 16 18 16.5 21 C 17 23.5 15.5 25.5 13 25"/>
+      <path d="M 46 22.5 L 46.8 22.7"/>
+      <path d="M 53.5 25 L 54.3 25.4"/>
+    </symbol>
+    <!-- WhatsApp glyph for CTA -->
+    <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.027 21.5c-1.788 0-3.532-.477-5.061-1.382L2 21l1.95-4.832C2.991 14.59 2.527 12.842 2.527 11.054 2.527 5.812 6.785 1.554 12.027 1.554c2.553 0 4.951.994 6.754 2.799 1.804 1.804 2.798 4.203 2.797 6.755 0 5.242-4.258 9.5-9.5 9.5z"/>
+    </symbol>
+  </svg>
+
+  <!-- TOP NAV -->
+  <header class="topnav" id="topnav">
+    <div class="container topnav-inner">
+      <a href="#top" class="wordmark" aria-label="Widya home">widya</a>
+      <a class="btn" href="https://wa.me/6281234567890?text=Hi%20Widya%2C%20I%27d%20like%20to%20sign%20up%20%F0%9F%8C%B4&amp;utm_source=widya.co&amp;utm_medium=web&amp;utm_campaign=topnav" target="_blank" rel="noopener">
+        <svg class="btn-icon" aria-hidden="true"><use href="#i-wa"/></svg>
+        <span>Start on WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text fade-in">
+            <h1>Hi, I'm Widya.<br/>I handle your life in Bali.</h1>
+            <p class="subhead">Bike service, doctor appointments, restaurant bookings, the cleaner who didn't show up. One WhatsApp chat, one bill, no chaos.</p>
+            <p class="hero-price">
+              <strong>IDR 699K/month.</strong> First 20 members get <strong>IDR 300K in service credit</strong> to spend however you like.
+            </p>
+            <div>
+              <span class="founder-badge"><span class="dot"></span> 🌱 12 of 20 founder spots remaining</span>
+            </div>
+            <div class="hero-ctas">
+              <a class="btn btn-large" href="https://wa.me/6281234567890?text=Hi%20Widya%2C%20I%27d%20like%20to%20sign%20up%20%F0%9F%8C%B4&amp;utm_source=widya.co&amp;utm_medium=web&amp;utm_campaign=hero" target="_blank" rel="noopener">
+                <svg class="btn-icon" aria-hidden="true"><use href="#i-wa"/></svg>
+                Start on WhatsApp
+              </a>
+              <a class="text-link" href="#catalogue">See what I handle →</a>
+            </div>
+          </div>
+          <div class="hero-photo fade-in">
+            <div class="hero-photo-wrap">
+              <picture>
+                <source type="image/webp" srcset="img/widya-cafe-800.webp 800w, img/widya-cafe-1200.webp 1200w" sizes="(min-width: 1024px) 560px, 100vw" />
+                <img src="img/widya-cafe-1200.webp" alt="Widya sitting at a café in Bali with a phone and an iced coffee" loading="eager" fetchpriority="high" width="928" height="1152" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="how">
+      <div class="container">
+        <div class="section-head fade-in">
+          <span class="eyebrow">How it works</span>
+          <h2>Three steps, and the third one is mostly me doing the work.</h2>
+        </div>
+
+        <div class="how-grid">
+          <ol class="steps fade-in">
+            <li class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Sign up</h3>
+                <p>One WhatsApp message. No forms, no account, no app to install.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>Ask for anything</h3>
+                <p>Bike service. Doctor. Restaurant. Whatever's on your list. I'll figure out who's the right person for the job.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h3>It's handled</h3>
+                <p>Vetted vendors, transparent prices, one monthly bill. You get a confirmation and a follow-up.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="chat-stage fade-in" aria-label="Examples of WhatsApp conversations with Widya">
+            <picture>
+              <source type="image/webp" srcset="img/phone-hand-800.webp 800w, img/phone-hand-1200.webp 1200w" sizes="(min-width: 1024px) 520px, 100vw" />
+              <img src="img/phone-hand-1200.webp" alt="A hand holding a phone in a café in Bali" loading="lazy" width="928" height="1152" />
+            </picture>
+            <div class="chat-overlay">
+              <div class="chat-deck">
+
+                <div class="chat-card">
+                  <div class="chat-time">Tuesday · 9:42 AM</div>
+                  <div class="bubble-row right">
+                    <div class="bubble you">Need bike service tomorrow</div>
+                  </div>
+                  <div class="bubble-row">
+                    <div class="bubble widya"><span class="name">Widya</span>On it. Pak Wayan will pick up your NMAX at 9am. Last service was January so I'll do the full check. ~IDR 280K, added to your bill when done. Cool?</div>
+                  </div>
+                  <div class="bubble-row right">
+                    <div class="bubble you">👍</div>
+                  </div>
+                </div>
+
+                <div class="chat-card">
+                  <div class="chat-time">Friday · 6:15 PM</div>
+                  <div class="bubble-row right">
+                    <div class="bubble you">Sophia's not feeling great, can we see a doctor tomorrow?</div>
+                  </div>
+                  <div class="bubble-row">
+                    <div class="bubble widya"><span class="name">Widya</span>Yes. Dr. Putri at BIMC has a slot at 10am tomorrow, she speaks English, expat-friendly, ~IDR 800K. Want me to book it?</div>
+                  </div>
+                  <div class="bubble-row right">
+                    <div class="bubble you">Yes please</div>
+                  </div>
+                </div>
+
+                <div class="chat-card">
+                  <div class="chat-time">Sunday · 8:00 AM</div>
+                  <div class="bubble-row right">
+                    <div class="bubble you">AC in the bedroom is dripping</div>
+                  </div>
+                  <div class="bubble-row">
+                    <div class="bubble widya"><span class="name">Widya</span>Sending Made over today, he can be there 2pm. Standard service IDR 200K, parts if needed extra. Sound good?</div>
+                  </div>
+                  <div class="bubble-row right">
+                    <div class="bubble you">Yes</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT I HANDLE -->
+    <section id="catalogue" class="catalogue">
+      <div class="container">
+        <div class="section-head fade-in">
+          <span class="eyebrow">What I handle</span>
+          <h2>Real prices, listed below.</h2>
+          <p class="subhead">Tap any category to see the full menu.</p>
+        </div>
+
+        <!--
+          NOTE TO SAM: all prices below are placeholders pending your confirmation
+          before public launch. They live in /data/catalogue.json once migrated to Astro.
+        -->
+        <div class="cat-grid fade-in">
+
+          <button class="cat-card" aria-expanded="false" aria-controls="cat-1">
+            <span class="cat-icon"><svg aria-hidden="true"><use href="#i-bike"/></svg></span>
+            <h3 class="cat-name">Bike &amp; Transport</h3>
+            <p class="cat-preview">Service, repairs, drivers, airport runs</p>
+            <div class="cat-foot"><span>9 services</span><span class="arrow">›</span></div>
+            <div id="cat-1" class="cat-services">
+              <div class="cat-services-inner">
+                <div class="svc-row"><span class="svc-name">Bike service (full)</span><span class="svc-price">IDR 280K</span></div>
+                <div class="svc-row"><span class="svc-name">Bike service (quick check)</span><span class="svc-price">IDR 150K</span></div>
+                <div class="svc-row"><span class="svc-name">Bike repair (call-out)</span><span class="svc-price">IDR 100K + parts</span></div>
+                <div class="svc-row"><span class="svc-name">STNK renewal</span><span class="svc-price">IDR 350K</span></div>
+                <div class="svc-row"><span class="svc-name">Driver (half day, 4 hrs)</span><span class="svc-price">IDR 350K</span></div>
+                <div class="svc-row"><span class="svc-name">Driver (full day, 10 hrs)</span><span class="svc-price">IDR 600K</span></div>
+                <div class="svc-row"><span class="svc-name">Airport transfer (one way)</span><span class="svc-price">IDR 250K</span></div>
+                <div class="svc-row"><span class="svc-name">Bike/car rental sourcing</span><span class="svc-price">IDR 100K finder fee</span></div>
+                <div class="svc-row"><span class="svc-name">Accident response</span><span class="svc-price">From IDR 500K</span></div>
+              </div>
+            </div>
+          </button>
+
+          <button class="cat-card" aria-expanded="false" aria-controls="cat-2">
+            <span class="cat-icon"><svg aria-hidden="true"><use href="#i-health"/></svg></span>
+            <h3 class="cat-name">Healthcare</h3>
+            <p class="cat-preview">Doctors, dentists, hospital navigation</p>
+            <div class="cat-foot"><span>8 services</span><span class="arrow">›</span></div>
+            <div id="cat-2" class="cat-services">
+              <div class="cat-services-inner">
+                <div class="svc-row"><span class="svc-name">GP appointment booking</span><span class="svc-price">IDR 100K + consult</span></div>
+                <div class="svc-row"><span class="svc-name">Specialist booking</span><span class="svc-price">IDR 200K + consult</span></div>
+                <div class="svc-row"><span class="svc-name">Hospital navigation</span><span class="svc-price">IDR 500K</span></div>
+                <div class="svc-row"><span class="svc-name">Pharmacy delivery</span><span class="svc-price">IDR 50K + meds</span></div>
+                <div class="svc-row"><span class="svc-name">Lab tests / annual checkup</span><span class="svc-price">IDR 200K + labs</span></div>
+                <div class="svc-row"><span class="svc-name">Dentist booking</span><span class="svc-price">IDR 100K + treatment</span></div>
+                <div class="svc-row"><span class="svc-name">Medical translation (in-person)</span><span class="svc-price">IDR 400K/hr</span></div>
+                <div class="svc-row"><span class="svc-name">Insurance claim liaison</span><span class="svc-price">IDR 500K/claim</span></div>
+              </div>
+            </div>
+          </button>
+
+          <button class="cat-card" aria-expanded="false" aria-controls="cat-3">
+            <span class="cat-icon"><svg aria-hidden="true"><use href="#i-home"/></svg></span>
+            <h3 class="cat-name">Household Repairs</h3>
+            <p class="cat-preview">AC, plumbing, electrical, internet</p>
+            <div class="cat-foot"><span>6 services</span><span class="arrow">›</span></div>
+            <div id="cat-3" class="cat-services">
+              <div class="cat-services-inner">
+                <div class="svc-row"><span class="svc-name">AC servicing (clean &amp; check)</span><span class="svc-price">IDR 200K/unit</span></div>
+                <div class="svc-row"><span class="svc-name">Plumbing repairs</span><span class="svc-price">From IDR 250K + parts</span></div>
+                <div class="svc-row"><span class="svc-name">Electrical repairs</span><span class="svc-price">From IDR 250K + parts</span></div>
+                <div class="svc-row"><span class="svc-name">Internet troubleshooting</span><span class="svc-price">IDR 200K</span></div>
+                <div class="svc-row"><span class="svc-name">Pest control treatment</span><span class="svc-price">IDR 350K</span></div>
+                <div class="svc-row"><span class="svc-name">Locksmith (call-out)</span><span class="svc-price">IDR 300K</span></div>
+              </div>
+            </div>
+          </button>
+
+          <button class="cat-card" aria-expanded="false" aria-controls="cat-4">
+            <span class="cat-icon"><svg aria-hidden="true"><use href="#i-food"/></svg></span>
+            <h3 class="cat-name">Food &amp; Dining</h3>
+            <p class="cat-preview">Reservations, chefs, catering</p>
+            <div class="cat-foot"><span>6 services</span><span class="arrow">›</span></div>
+            <div id="cat-4" class="cat-services">
+              <div class="cat-services-inner">
+                <div class="svc-row"><span class="svc-name">Restaurant reservations</span><span class="svc-price">Free</span></div>
+                <div class="svc-row"><span class="svc-name">Recommendations &amp; curation</span><span class="svc-price">Free</span></div>
+                <div class="svc-row"><span class="svc-name">Personal chef booking</span><span class="svc-price">IDR 1.5M admin + chef</span></div>
+                <div class="svc-row"><span class="svc-name">Catering coordination</span><span class="svc-price">IDR 1M admin + cost</span></div>
+                <div class="svc-row"><span class="svc-name">Specialty grocery sourcing</span><span class="svc-price">IDR 100K + cost</span></div>
+                <div class="svc-row"><span class="svc-name">Cakes &amp; event food</span><span class="svc-price">IDR 200K admin</span></div>
+              </div>
+            </div>
+          </button>
+
+          <button class="cat-card" aria-expanded="false" aria-controls="cat-5">
+            <span class="cat-icon"><svg aria-hidden="true"><use href="#i-wellness"/></svg></span>
+            <h3 class="cat-name">Wellness &amp; Lifestyle</h3>
+            <p class="cat-preview">Massage, trainers, salons</p>
+            <div class="cat-foot"><span>4 services</span><span class="arrow">›</span></div>
+            <div id="cat-5" class="cat-services">
+              <div class="cat-services-inner">
+                <div class="svc-row"><span class="svc-name">Massage &amp; spa booking</span><span class="svc-price">Free</span></div>
+                <div class="svc-row"><span class="svc-name">Personal trainer (per session)</span><span class="svc-price">IDR 500K + trainer</span></div>
+                <div class="svc-row"><span class="svc-name">Yoga / pilates / BJJ studio</span><span class="svc-price">Free</span></div>
+                <div class="svc-row"><span class="svc-name">Hair, barber, nails, waxing</span><span class="svc-price">Free</span></div>
+              </div>
+            </div>
+          </button>
+
+          <button class="cat-card" aria-expanded="false" aria-controls="cat-6">
+            <span class="cat-icon"><svg aria-hidden="true"><use href="#i-family"/></svg></span>
+            <h3 class="cat-name">Family &amp; Childcare</h3>
+            <p class="cat-preview">Babysitters, tutors, paediatricians</p>
+            <div class="cat-foot"><span>4 services</span><span class="arrow">›</span></div>
+            <div id="cat-6" class="cat-services">
+              <div class="cat-services-inner">
+                <div class="svc-row"><span class="svc-name">Babysitter sourcing &amp; vetting</span><span class="svc-price">IDR 500K + hourly</span></div>
+                <div class="svc-row"><span class="svc-name">Tutor sourcing</span><span class="svc-price">IDR 500K placement</span></div>
+                <div class="svc-row"><span class="svc-name">Paediatrician booking</span><span class="svc-price">IDR 200K + consult</span></div>
+                <div class="svc-row"><span class="svc-name">Activity &amp; camp finding</span><span class="svc-price">IDR 300K research</span></div>
+              </div>
+            </div>
+          </button>
+
+          <button class="cat-card" aria-expanded="false" aria-controls="cat-7">
+            <span class="cat-icon"><svg aria-hidden="true"><use href="#i-classes"/></svg></span>
+            <h3 class="cat-name">Classes &amp; Instruction</h3>
+            <p class="cat-preview">Indonesian, surf, music, cooking</p>
+            <div class="cat-foot"><span>5 services</span><span class="arrow">›</span></div>
+            <div id="cat-7" class="cat-services">
+              <div class="cat-services-inner">
+                <div class="svc-row"><span class="svc-name">Indonesian language tutor</span><span class="svc-price">IDR 250K/hr all-in</span></div>
+                <div class="svc-row"><span class="svc-name">Surf coaching (per session)</span><span class="svc-price">IDR 400K + coach</span></div>
+                <div class="svc-row"><span class="svc-name">Music teacher (per hour)</span><span class="svc-price">IDR 250K all-in</span></div>
+                <div class="svc-row"><span class="svc-name">Cooking class booking</span><span class="svc-price">IDR 500K + class</span></div>
+                <div class="svc-row"><span class="svc-name">Workshop / course finding</span><span class="svc-price">IDR 200K admin</span></div>
+              </div>
+            </div>
+          </button>
+
+          <button class="cat-card" aria-expanded="false" aria-controls="cat-8">
+            <span class="cat-icon"><svg aria-hidden="true"><use href="#i-tech"/></svg></span>
+            <h3 class="cat-name">Tech &amp; Devices</h3>
+            <p class="cat-preview">Phone, laptop, VPN setup</p>
+            <div class="cat-foot"><span>3 services</span><span class="arrow">›</span></div>
+            <div id="cat-8" class="cat-services">
+              <div class="cat-services-inner">
+                <div class="svc-row"><span class="svc-name">Phone repair coordination</span><span class="svc-price">IDR 200K + repair</span></div>
+                <div class="svc-row"><span class="svc-name">Laptop repair coordination</span><span class="svc-price">IDR 250K + repair</span></div>
+                <div class="svc-row"><span class="svc-name">VPN setup &amp; configuration</span><span class="svc-price">IDR 150K</span></div>
+              </div>
+            </div>
+          </button>
+
+          <button class="cat-card" aria-expanded="false" aria-controls="cat-9">
+            <span class="cat-icon"><svg aria-hidden="true"><use href="#i-events"/></svg></span>
+            <h3 class="cat-name">Events</h3>
+            <p class="cat-preview">Photographers, parties, anniversaries</p>
+            <div class="cat-foot"><span>3 services</span><span class="arrow">›</span></div>
+            <div id="cat-9" class="cat-services">
+              <div class="cat-services-inner">
+                <div class="svc-row"><span class="svc-name">Photographer booking</span><span class="svc-price">IDR 500K + photog</span></div>
+                <div class="svc-row"><span class="svc-name">Videographer booking</span><span class="svc-price">IDR 500K + videog</span></div>
+                <div class="svc-row"><span class="svc-name">Birthday / anniversary</span><span class="svc-price">From IDR 1M</span></div>
+              </div>
+            </div>
+          </button>
+
+          <button class="cat-card" aria-expanded="false" aria-controls="cat-10">
+            <span class="cat-icon"><svg aria-hidden="true"><use href="#i-admin"/></svg></span>
+            <h3 class="cat-name">Admin &amp; Financial</h3>
+            <p class="cat-preview">Bills, SIMs, cash</p>
+            <div class="cat-foot"><span>3 services</span><span class="arrow">›</span></div>
+            <div id="cat-10" class="cat-services">
+              <div class="cat-services-inner">
+                <div class="svc-row"><span class="svc-name">Bill payments (PLN, PDAM, internet)</span><span class="svc-price">IDR 50K/month flat</span></div>
+                <div class="svc-row"><span class="svc-name">SIM activation &amp; top-ups</span><span class="svc-price">Cost + IDR 25K</span></div>
+                <div class="svc-row"><span class="svc-name">Cash &amp; FX coordination</span><span class="svc-price">1% spread</span></div>
+              </div>
+            </div>
+          </button>
+
+          <button class="cat-card" aria-expanded="false" aria-controls="cat-11">
+            <span class="cat-icon"><svg aria-hidden="true"><use href="#i-legal"/></svg></span>
+            <h3 class="cat-name">Legal &amp; Documents</h3>
+            <p class="cat-preview">Translation, notary, contracts</p>
+            <div class="cat-foot"><span>4 services</span><span class="arrow">›</span></div>
+            <div id="cat-11" class="cat-services">
+              <div class="cat-services-inner">
+                <div class="svc-row"><span class="svc-name">Sworn document translation</span><span class="svc-price">IDR 300K/page</span></div>
+                <div class="svc-row"><span class="svc-name">Notary coordination</span><span class="svc-price">IDR 500K + fees</span></div>
+                <div class="svc-row"><span class="svc-name">Apostille service</span><span class="svc-price">IDR 1M + gov fees</span></div>
+                <div class="svc-row"><span class="svc-name">Property lease review</span><span class="svc-price">IDR 1.5M (via lawyer)</span></div>
+              </div>
+            </div>
+          </button>
+
+          <button class="cat-card" aria-expanded="false" aria-controls="cat-12">
+            <span class="cat-icon"><svg aria-hidden="true"><use href="#i-pets"/></svg></span>
+            <h3 class="cat-name">Pet Care</h3>
+            <p class="cat-preview">Vets, sitting, walking</p>
+            <div class="cat-foot"><span>4 services</span><span class="arrow">›</span></div>
+            <div id="cat-12" class="cat-services">
+              <div class="cat-services-inner">
+                <div class="svc-row"><span class="svc-name">Vet booking</span><span class="svc-price">IDR 200K + vet</span></div>
+                <div class="svc-row"><span class="svc-name">Pet sitting (per day)</span><span class="svc-price">IDR 250K</span></div>
+                <div class="svc-row"><span class="svc-name">Dog walking (per walk)</span><span class="svc-price">IDR 150K</span></div>
+                <div class="svc-row"><span class="svc-name">Pet supplies sourcing</span><span class="svc-price">IDR 100K + cost</span></div>
+              </div>
+            </div>
+          </button>
+
+        </div>
+
+        <p class="cat-foot-note fade-in">Don't see what you need? Ask anyway. I do plenty that's not on the menu.</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-photo fade-in">
+            <picture>
+              <source type="image/webp" srcset="img/widya-scooter-800.webp 800w, img/widya-scooter-1200.webp 1200w" sizes="(min-width: 1024px) 520px, 100vw" />
+              <img src="img/widya-scooter-1200.webp" alt="Widya laughing while sitting on her scooter on a Bali side street" loading="lazy" width="928" height="1152" />
+            </picture>
+          </div>
+          <div class="about-text fade-in">
+            <span class="eyebrow">About</span>
+            <h2>Hi, I'm Widya</h2>
+            <p>I'm Widya. I'm Indonesian, I've lived in Bali my whole life, and I've spent the last few years helping expats live well here. Bikes, doctors, the gas guy, the visa agent, the contractor who said he'd come on Tuesday and didn't.</p>
+            <p>I started doing this for one family. Then a few friends. Now I want to do it for you.</p>
+            <p>I work with a small network of trusted vendors I've built relationships with over years. When you message me, you're getting their hands and my judgment about who's right for the job. Plus the bot I built with my partner, so the routine stuff gets handled in seconds.</p>
+            <p>Bali should feel like home, not like a constant errand list. That's what Widya is for.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <div class="section-head center fade-in">
+          <span class="eyebrow">Pricing</span>
+          <h2>One price, no contracts</h2>
+        </div>
+
+        <div class="price-card fade-in">
+          <span class="price-eyebrow">Monthly membership</span>
+          <div class="price-main">
+            IDR 699K
+            <span class="price-period">per month</span>
+          </div>
+
+          <div class="founder-panel">
+            <span class="label">Founder bonus: IDR 300K in service credit</span>
+            <span class="sublabel">Yours to spend on any service in your first few months.</span>
+            <span class="count">🌱 12 of 20 founder spots remaining</span>
+          </div>
+
+          <ul class="price-list">
+            <li>Cancel anytime, no contracts</li>
+            <li>Services billed at published rates, nothing hidden</li>
+            <li>First service free when you join</li>
+            <li>Add household members at no extra cost</li>
+          </ul>
+
+          <a class="btn btn-large" href="https://wa.me/6281234567890?text=Hi%20Widya%2C%20I%27d%20like%20to%20sign%20up%20%F0%9F%8C%B4&amp;utm_source=widya.co&amp;utm_medium=web&amp;utm_campaign=pricing" target="_blank" rel="noopener">
+            <svg class="btn-icon" aria-hidden="true"><use href="#i-wa"/></svg>
+            Claim a founder spot →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STILL LIFE BANNER -->
+    <section class="still-life" aria-hidden="true">
+      <div class="container">
+        <div class="still-life-frame fade-in">
+          <picture>
+            <source type="image/webp" srcset="img/still-life-800.webp 800w, img/still-life-1200.webp 1200w, img/still-life.webp 1920w" sizes="100vw" />
+            <img src="img/still-life-1200.webp" alt="" loading="lazy" width="1376" height="768" />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <div class="section-head center fade-in">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions</h2>
+        </div>
+
+        <div class="faq-list fade-in">
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="a1">
+              <span>Is Widya a real person?</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a" id="a1" role="region">
+              <div class="faq-a-inner">Yes. I'm Widya. I'm Indonesian, I live in Bali, and I run this. The chatbot you'll mostly interact with helps me handle the volume, but every weird, sensitive, or important thing comes straight to me.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="a2">
+              <span>How fast do you respond?</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a" id="a2" role="region">
+              <div class="faq-a-inner">Routine things (bookings, status updates): within minutes. Anything that needs me personally: same day during business hours, next morning if it's late.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="a3">
+              <span>How does the IDR 699K subscription actually work?</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a" id="a3" role="region">
+              <div class="faq-a-inner">It's your monthly membership. It gives you access to the platform and unlimited messaging. Specific services (bike service, doctor visits, etc.) are billed separately at the published rates. You only pay for what you use, on top of the membership.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="a4">
+              <span>What if you can't do something?</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a" id="a4" role="region">
+              <div class="faq-a-inner">I'll tell you up front and point you to someone reliable who can. Better than pretending.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="a5">
+              <span>What if I'm only in Bali for a few months?</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a" id="a5" role="region">
+              <div class="faq-a-inner">Sign up monthly, cancel anytime. No contracts. Many of our members are seasonal.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="a6">
+              <span>What happens if I cancel?</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a" id="a6" role="region">
+              <div class="faq-a-inner">You cancel via WhatsApp, you stop being billed at the next cycle. That's it. If you come back later, your file is still here and we pick up where we left off.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="a7">
+              <span>Is my data private?</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a" id="a7" role="region">
+              <div class="faq-a-inner">Yes. Your information stays inside Widya, never sold, never shared with vendors beyond what's needed to complete a service. PT-registered Indonesian company, standard data protection.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="a8">
+              <span>Can I share my account with my partner or family?</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a" id="a8" role="region">
+              <div class="faq-a-inner">Yes. The membership is per household, not per person. Add as many family members as you like.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="wordmark">widya</div>
+          <p class="tagline">Your Bali life, handled.</p>
+          <p>Made in Bali 🌴</p>
+        </div>
+        <div class="footer-col">
+          <h4>Get in touch</h4>
+          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">WhatsApp: +62 [number]</a>
+          <a href="mailto:hello@widya.co">hello@widya.co</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Terms of service</a>
+          <a href="#">Privacy policy</a>
+          <p class="muted">PT Widya Bali Konsultan</p>
+          <p class="muted">NIB: [TBD]</p>
+        </div>
+      </div>
+      <div class="footer-strip">© 2026 Widya. Made with care in Bali.</div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="sticky-cta">
+    <a class="btn" href="https://wa.me/6281234567890?text=Hi%20Widya%2C%20I%27d%20like%20to%20sign%20up%20%F0%9F%8C%B4&amp;utm_source=widya.co&amp;utm_medium=web&amp;utm_campaign=sticky-mobile" target="_blank" rel="noopener">
+      <svg class="btn-icon" aria-hidden="true"><use href="#i-wa"/></svg>
+      Start on WhatsApp
+    </a>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
