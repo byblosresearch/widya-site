@@ -507,7 +507,7 @@ h3 {
   margin-top: 0;
 }
 .cat-card[aria-expanded="true"] .cat-services {
-  max-height: 700px;
+  max-height: 900px;
   margin-top: 4px;
 }
 .cat-services-inner {
@@ -524,7 +524,7 @@ h3 {
 }
 .svc-row:last-child { border-bottom: none; }
 .svc-name { font-size: 15px; color: var(--text-deep); }
-.svc-price { font-size: 15px; font-weight: 500; color: var(--accent-clay); white-space: nowrap; }
+.svc-vendor { display: block; font-size: 13px; color: var(--text-muted); margin-top: 2px; }
 
 .cat-foot-note {
   text-align: center;

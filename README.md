@@ -28,17 +28,15 @@ site/
 
 ## Editing content
 
-- **Catalogue (categories, services, prices)** — edit the `.cat-card` blocks inside `index.html` under `<section id="catalogue">`. Each card has a service list with name + price rows.
+- **Catalogue (categories, services)** — edit the `.cat-card` blocks inside `index.html` under `<section id="catalogue">`. Each card lists service rows; an optional `.svc-vendor` span under the name shows the vendor ("via Baik Wash"). Only services with a confirmed vendor in `widya-vendor-directory-2.xlsx` (the source of truth) are listed — last sync 2026-07-08. Per-service prices are deliberately not published on the site; they're quoted in chat. Update the card's service count in `.cat-foot` when adding/removing rows.
 - **FAQ** — edit the `.faq-item` blocks inside `<section id="faq">`.
 - **Pricing / founder counter** — edit the `.hero-price`, `.founder-badge`, and `.founder-panel` blocks. Two places to update the counter: hero badge and pricing card.
-- **WhatsApp number** — search-and-replace `6281234567890` across `index.html` and `404.html`. There are five WhatsApp deep links (hero, topnav, pricing, footer, sticky-mobile + the 404). All use the pre-filled message: `Hi Widya, I'd like to sign up 🌴`.
+- **WhatsApp number** — currently `628216338492` (+62 821-6338-492). Search-and-replace it across `index.html` and `404.html` to change. There are five WhatsApp deep links in index (hero, topnav, pricing, footer, sticky-mobile) plus two in the 404, and the footer display text. All use the pre-filled message: `Hi Widya, I'd like to sign up 🌴`.
 - **PT details / NIB** — footer right column.
 
 ## Open items pending Sam's input
 
 These are flagged inline in the markup. Search for them when you're ready:
-- All catalogue prices (placeholder; confirm before launch)
-- WhatsApp Business number (`6281234567890` placeholder)
 - PT registration name and NIB
 - Founder counter starting number (`12 of 20`)
 - Terms of service + Privacy policy text

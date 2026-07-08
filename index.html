@@ -193,7 +193,7 @@
   <header class="topnav" id="topnav">
     <div class="container topnav-inner">
       <a href="#top" class="wordmark" aria-label="Widya home">widya</a>
-      <a class="btn" href="https://wa.me/6281234567890?text=Hi%20Widya%2C%20I%27d%20like%20to%20sign%20up%20%F0%9F%8C%B4&amp;utm_source=widya.co&amp;utm_medium=web&amp;utm_campaign=topnav" target="_blank" rel="noopener">
+      <a class="btn" href="https://wa.me/628216338492?text=Hi%20Widya%2C%20I%27d%20like%20to%20sign%20up%20%F0%9F%8C%B4&amp;utm_source=widya.co&amp;utm_medium=web&amp;utm_campaign=topnav" target="_blank" rel="noopener">
         <svg class="btn-icon" aria-hidden="true"><use href="#i-wa"/></svg>
         <span>Start on WhatsApp</span>
       </a>
@@ -216,7 +216,7 @@
               <span class="founder-badge"><span class="dot"></span> 🌱 12 of 20 founder spots remaining</span>
             </div>
             <div class="hero-ctas">
-              <a class="btn btn-large" href="https://wa.me/6281234567890?text=Hi%20Widya%2C%20I%27d%20like%20to%20sign%20up%20%F0%9F%8C%B4&amp;utm_source=widya.co&amp;utm_medium=web&amp;utm_campaign=hero" target="_blank" rel="noopener">
+              <a class="btn btn-large" href="https://wa.me/628216338492?text=Hi%20Widya%2C%20I%27d%20like%20to%20sign%20up%20%F0%9F%8C%B4&amp;utm_source=widya.co&amp;utm_medium=web&amp;utm_campaign=hero" target="_blank" rel="noopener">
                 <svg class="btn-icon" aria-hidden="true"><use href="#i-wa"/></svg>
                 Start on WhatsApp
               </a>
@@ -282,7 +282,7 @@
                     <div class="bubble you">Need bike service tomorrow</div>
                   </div>
                   <div class="bubble-row">
-                    <div class="bubble widya"><span class="name">Widya</span>On it. Pak Wayan will pick up your NMAX at 9am. Last service was January so I'll do the full check. ~IDR 280K, added to your bill when done. Cool?</div>
+                    <div class="bubble widya"><span class="name">Widya</span>On it. Baik Wash will pick up your NMAX at 9am. Last service was January so I'll book the full service. IDR 750K, added to your bill when done. Cool?</div>
                   </div>
                   <div class="bubble-row right">
                     <div class="bubble you">👍</div>
@@ -308,7 +308,7 @@
                     <div class="bubble you">AC in the bedroom is dripping</div>
                   </div>
                   <div class="bubble-row">
-                    <div class="bubble widya"><span class="name">Widya</span>Sending Made over today, he can be there 2pm. Standard service IDR 200K, parts if needed extra. Sound good?</div>
+                    <div class="bubble widya"><span class="name">Widya</span>Sending Budiarta over today, he can be there 2pm. Standard service IDR 200K, parts if needed extra. Sound good?</div>
                   </div>
                   <div class="bubble-row right">
                     <div class="bubble you">Yes</div>
@@ -327,13 +327,16 @@
       <div class="container">
         <div class="section-head fade-in">
           <span class="eyebrow">What I handle</span>
-          <h2>Real prices, listed below.</h2>
-          <p class="subhead">Tap any category to see the full menu.</p>
+          <h2>The everyday stuff, covered.</h2>
+          <p class="subhead">Tap any category to see the full menu. You'll always get the exact price in chat before anything's booked.</p>
         </div>
 
         <!--
-          NOTE TO SAM: all prices below are placeholders pending your confirmation
-          before public launch. They live in /data/catalogue.json once migrated to Astro.
+          NOTE TO SAM: services + vendors synced from widya-vendor-directory-2.xlsx
+          (source of truth) on 2026-07-08. Only services with a confirmed vendor
+          (or handled by Widya directly) are listed. Per-service prices are
+          intentionally not published — they're quoted in chat before booking.
+          They live in /data/catalogue.json once migrated to Astro.
         -->
         <div class="cat-grid fade-in">
 
@@ -341,18 +344,17 @@
             <span class="cat-icon"><svg aria-hidden="true"><use href="#i-bike"/></svg></span>
             <h3 class="cat-name">Bike &amp; Transport</h3>
             <p class="cat-preview">Service, repairs, drivers, airport runs</p>
-            <div class="cat-foot"><span>9 services</span><span class="arrow">›</span></div>
+            <div class="cat-foot"><span>8 services</span><span class="arrow">›</span></div>
             <div id="cat-1" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Bike service (full)</span><span class="svc-price">IDR 280K</span></div>
-                <div class="svc-row"><span class="svc-name">Bike service (quick check)</span><span class="svc-price">IDR 150K</span></div>
-                <div class="svc-row"><span class="svc-name">Bike repair (call-out)</span><span class="svc-price">IDR 100K + parts</span></div>
-                <div class="svc-row"><span class="svc-name">STNK renewal</span><span class="svc-price">IDR 350K</span></div>
-                <div class="svc-row"><span class="svc-name">Driver (half day, 4 hrs)</span><span class="svc-price">IDR 350K</span></div>
-                <div class="svc-row"><span class="svc-name">Driver (full day, 10 hrs)</span><span class="svc-price">IDR 600K</span></div>
-                <div class="svc-row"><span class="svc-name">Airport transfer (one way)</span><span class="svc-price">IDR 250K</span></div>
-                <div class="svc-row"><span class="svc-name">Bike/car rental sourcing</span><span class="svc-price">IDR 100K finder fee</span></div>
-                <div class="svc-row"><span class="svc-name">Accident response</span><span class="svc-price">From IDR 500K</span></div>
+                <div class="svc-row"><span class="svc-name">Bike service (full)<span class="svc-vendor">via Baik Wash</span></span></div>
+                <div class="svc-row"><span class="svc-name">Bike service (quick check)<span class="svc-vendor">via Baik Wash</span></span></div>
+                <div class="svc-row"><span class="svc-name">Bike repair (call-out)<span class="svc-vendor">via Baik Wash</span></span></div>
+                <div class="svc-row"><span class="svc-name">STNK &amp; SIM renewal<span class="svc-vendor">via Echa</span></span></div>
+                <div class="svc-row"><span class="svc-name">Driver (half day, 6 hrs)<span class="svc-vendor">via Ahmat</span></span></div>
+                <div class="svc-row"><span class="svc-name">Driver (full day, 10 hrs)<span class="svc-vendor">via Ahmat</span></span></div>
+                <div class="svc-row"><span class="svc-name">Airport transfer (one way)<span class="svc-vendor">via Ahmat</span></span></div>
+                <div class="svc-row"><span class="svc-name">Bike/car rental sourcing<span class="svc-vendor">via Echa</span></span></div>
               </div>
             </div>
           </button>
@@ -361,17 +363,18 @@
             <span class="cat-icon"><svg aria-hidden="true"><use href="#i-health"/></svg></span>
             <h3 class="cat-name">Healthcare</h3>
             <p class="cat-preview">Doctors, dentists, hospital navigation</p>
-            <div class="cat-foot"><span>8 services</span><span class="arrow">›</span></div>
+            <div class="cat-foot"><span>9 services</span><span class="arrow">›</span></div>
             <div id="cat-2" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">GP appointment booking</span><span class="svc-price">IDR 100K + consult</span></div>
-                <div class="svc-row"><span class="svc-name">Specialist booking</span><span class="svc-price">IDR 200K + consult</span></div>
-                <div class="svc-row"><span class="svc-name">Hospital navigation</span><span class="svc-price">IDR 500K</span></div>
-                <div class="svc-row"><span class="svc-name">Pharmacy delivery</span><span class="svc-price">IDR 50K + meds</span></div>
-                <div class="svc-row"><span class="svc-name">Lab tests / annual checkup</span><span class="svc-price">IDR 200K + labs</span></div>
-                <div class="svc-row"><span class="svc-name">Dentist booking</span><span class="svc-price">IDR 100K + treatment</span></div>
-                <div class="svc-row"><span class="svc-name">Medical translation (in-person)</span><span class="svc-price">IDR 400K/hr</span></div>
-                <div class="svc-row"><span class="svc-name">Insurance claim liaison</span><span class="svc-price">IDR 500K/claim</span></div>
+                <div class="svc-row"><span class="svc-name">GP appointment booking<span class="svc-vendor">via Prodia, Tabanan</span></span></div>
+                <div class="svc-row"><span class="svc-name">Specialist booking</span></div>
+                <div class="svc-row"><span class="svc-name">Hospital navigation</span></div>
+                <div class="svc-row"><span class="svc-name">Pharmacy delivery</span></div>
+                <div class="svc-row"><span class="svc-name">Lab tests / annual checkup<span class="svc-vendor">via Prodia, Tabanan</span></span></div>
+                <div class="svc-row"><span class="svc-name">Dentist booking<span class="svc-vendor">via Hydro Dental, Batu Bolong</span></span></div>
+                <div class="svc-row"><span class="svc-name">Insurance claim liaison<span class="svc-vendor">via Bu Fajar (Allianz)</span></span></div>
+                <div class="svc-row"><span class="svc-name">IV drip therapy booking<span class="svc-vendor">via Pharmacy Bali 24/7</span></span></div>
+                <div class="svc-row"><span class="svc-name">Physiotherapy booking<span class="svc-vendor">via Made Widnyana</span></span></div>
               </div>
             </div>
           </button>
@@ -379,16 +382,20 @@
           <button class="cat-card" aria-expanded="false" aria-controls="cat-3">
             <span class="cat-icon"><svg aria-hidden="true"><use href="#i-home"/></svg></span>
             <h3 class="cat-name">Household Repairs</h3>
-            <p class="cat-preview">AC, plumbing, electrical, internet</p>
-            <div class="cat-foot"><span>6 services</span><span class="arrow">›</span></div>
+            <p class="cat-preview">AC, plumbing, cleaning, laundry</p>
+            <div class="cat-foot"><span>10 services</span><span class="arrow">›</span></div>
             <div id="cat-3" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">AC servicing (clean &amp; check)</span><span class="svc-price">IDR 200K/unit</span></div>
-                <div class="svc-row"><span class="svc-name">Plumbing repairs</span><span class="svc-price">From IDR 250K + parts</span></div>
-                <div class="svc-row"><span class="svc-name">Electrical repairs</span><span class="svc-price">From IDR 250K + parts</span></div>
-                <div class="svc-row"><span class="svc-name">Internet troubleshooting</span><span class="svc-price">IDR 200K</span></div>
-                <div class="svc-row"><span class="svc-name">Pest control treatment</span><span class="svc-price">IDR 350K</span></div>
-                <div class="svc-row"><span class="svc-name">Locksmith (call-out)</span><span class="svc-price">IDR 300K</span></div>
+                <div class="svc-row"><span class="svc-name">AC servicing (clean &amp; check)<span class="svc-vendor">via Budiarta</span></span></div>
+                <div class="svc-row"><span class="svc-name">Plumbing repairs<span class="svc-vendor">via Diah</span></span></div>
+                <div class="svc-row"><span class="svc-name">Electrical repairs<span class="svc-vendor">via I Gede Ardana</span></span></div>
+                <div class="svc-row"><span class="svc-name">Internet troubleshooting<span class="svc-vendor">via GlobalXtreme</span></span></div>
+                <div class="svc-row"><span class="svc-name">Pest control treatment<span class="svc-vendor">via Diah</span></span></div>
+                <div class="svc-row"><span class="svc-name">Locksmith (call-out)</span></div>
+                <div class="svc-row"><span class="svc-name">Cleaning / housekeeping<span class="svc-vendor">via Rini</span></span></div>
+                <div class="svc-row"><span class="svc-name">Laundry pickup &amp; delivery<span class="svc-vendor">via Samaha Laundry</span></span></div>
+                <div class="svc-row"><span class="svc-name">Water gallon delivery<span class="svc-vendor">via Alfagift</span></span></div>
+                <div class="svc-row"><span class="svc-name">Moving assistance (driver + helper)<span class="svc-vendor">via Sabil</span></span></div>
               </div>
             </div>
           </button>
@@ -397,15 +404,17 @@
             <span class="cat-icon"><svg aria-hidden="true"><use href="#i-food"/></svg></span>
             <h3 class="cat-name">Food &amp; Dining</h3>
             <p class="cat-preview">Reservations, chefs, catering</p>
-            <div class="cat-foot"><span>6 services</span><span class="arrow">›</span></div>
+            <div class="cat-foot"><span>8 services</span><span class="arrow">›</span></div>
             <div id="cat-4" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Restaurant reservations</span><span class="svc-price">Free</span></div>
-                <div class="svc-row"><span class="svc-name">Recommendations &amp; curation</span><span class="svc-price">Free</span></div>
-                <div class="svc-row"><span class="svc-name">Personal chef booking</span><span class="svc-price">IDR 1.5M admin + chef</span></div>
-                <div class="svc-row"><span class="svc-name">Catering coordination</span><span class="svc-price">IDR 1M admin + cost</span></div>
-                <div class="svc-row"><span class="svc-name">Specialty grocery sourcing</span><span class="svc-price">IDR 100K + cost</span></div>
-                <div class="svc-row"><span class="svc-name">Cakes &amp; event food</span><span class="svc-price">IDR 200K admin</span></div>
+                <div class="svc-row"><span class="svc-name">Restaurant reservations</span></div>
+                <div class="svc-row"><span class="svc-name">Recommendations &amp; curation</span></div>
+                <div class="svc-row"><span class="svc-name">Personal chef (weekly, all-in)<span class="svc-vendor">via Made Chef</span></span></div>
+                <div class="svc-row"><span class="svc-name">Catering coordination<span class="svc-vendor">via Made Chef</span></span></div>
+                <div class="svc-row"><span class="svc-name">Specialty grocery sourcing</span></div>
+                <div class="svc-row"><span class="svc-name">Cakes &amp; event food</span></div>
+                <div class="svc-row"><span class="svc-name">Beach club reservations</span></div>
+                <div class="svc-row"><span class="svc-name">Alcohol delivery coordination<span class="svc-vendor">via GoDrinks</span></span></div>
               </div>
             </div>
           </button>
@@ -414,28 +423,14 @@
             <span class="cat-icon"><svg aria-hidden="true"><use href="#i-wellness"/></svg></span>
             <h3 class="cat-name">Wellness &amp; Lifestyle</h3>
             <p class="cat-preview">Massage, trainers, salons</p>
-            <div class="cat-foot"><span>4 services</span><span class="arrow">›</span></div>
+            <div class="cat-foot"><span>5 services</span><span class="arrow">›</span></div>
             <div id="cat-5" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Massage &amp; spa booking</span><span class="svc-price">Free</span></div>
-                <div class="svc-row"><span class="svc-name">Personal trainer (per session)</span><span class="svc-price">IDR 500K + trainer</span></div>
-                <div class="svc-row"><span class="svc-name">Yoga / pilates / BJJ studio</span><span class="svc-price">Free</span></div>
-                <div class="svc-row"><span class="svc-name">Hair, barber, nails, waxing</span><span class="svc-price">Free</span></div>
-              </div>
-            </div>
-          </button>
-
-          <button class="cat-card" aria-expanded="false" aria-controls="cat-6">
-            <span class="cat-icon"><svg aria-hidden="true"><use href="#i-family"/></svg></span>
-            <h3 class="cat-name">Family &amp; Childcare</h3>
-            <p class="cat-preview">Babysitters, tutors, paediatricians</p>
-            <div class="cat-foot"><span>4 services</span><span class="arrow">›</span></div>
-            <div id="cat-6" class="cat-services">
-              <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Babysitter sourcing &amp; vetting</span><span class="svc-price">IDR 500K + hourly</span></div>
-                <div class="svc-row"><span class="svc-name">Tutor sourcing</span><span class="svc-price">IDR 500K placement</span></div>
-                <div class="svc-row"><span class="svc-name">Paediatrician booking</span><span class="svc-price">IDR 200K + consult</span></div>
-                <div class="svc-row"><span class="svc-name">Activity &amp; camp finding</span><span class="svc-price">IDR 300K research</span></div>
+                <div class="svc-row"><span class="svc-name">Massage &amp; waxing booking<span class="svc-vendor">via Kantri</span></span></div>
+                <div class="svc-row"><span class="svc-name">Muay Thai personal trainer (per session)<span class="svc-vendor">via Surya</span></span></div>
+                <div class="svc-row"><span class="svc-name">Yoga / pilates / BJJ studio</span></div>
+                <div class="svc-row"><span class="svc-name">Hair, barber, nails, waxing<span class="svc-vendor">via Dadia &amp; Dewi</span></span></div>
+                <div class="svc-row"><span class="svc-name">Sound healing / breathwork classes<span class="svc-vendor">via Chitra</span></span></div>
               </div>
             </div>
           </button>
@@ -447,25 +442,26 @@
             <div class="cat-foot"><span>5 services</span><span class="arrow">›</span></div>
             <div id="cat-7" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Indonesian language tutor</span><span class="svc-price">IDR 250K/hr all-in</span></div>
-                <div class="svc-row"><span class="svc-name">Surf coaching (per session)</span><span class="svc-price">IDR 400K + coach</span></div>
-                <div class="svc-row"><span class="svc-name">Music teacher (per hour)</span><span class="svc-price">IDR 250K all-in</span></div>
-                <div class="svc-row"><span class="svc-name">Cooking class booking</span><span class="svc-price">IDR 500K + class</span></div>
-                <div class="svc-row"><span class="svc-name">Workshop / course finding</span><span class="svc-price">IDR 200K admin</span></div>
+                <div class="svc-row"><span class="svc-name">Indonesian language tutor<span class="svc-vendor">via Tom &amp; Elsa</span></span></div>
+                <div class="svc-row"><span class="svc-name">Surf coaching (per session)<span class="svc-vendor">via Coach Jambul</span></span></div>
+                <div class="svc-row"><span class="svc-name">Music teacher (per hour)<span class="svc-vendor">via Indice Music Course</span></span></div>
+                <div class="svc-row"><span class="svc-name">Cooking class booking<span class="svc-vendor">via Nia Cooking Class, Seminyak</span></span></div>
+                <div class="svc-row"><span class="svc-name">Tutor sourcing (school subjects)</span></div>
               </div>
             </div>
           </button>
 
           <button class="cat-card" aria-expanded="false" aria-controls="cat-8">
             <span class="cat-icon"><svg aria-hidden="true"><use href="#i-tech"/></svg></span>
-            <h3 class="cat-name">Tech &amp; Devices</h3>
-            <p class="cat-preview">Phone, laptop, VPN setup</p>
-            <div class="cat-foot"><span>3 services</span><span class="arrow">›</span></div>
+            <h3 class="cat-name">Tech &amp; Workspace</h3>
+            <p class="cat-preview">Phone, laptop, coworking, desks</p>
+            <div class="cat-foot"><span>4 services</span><span class="arrow">›</span></div>
             <div id="cat-8" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Phone repair coordination</span><span class="svc-price">IDR 200K + repair</span></div>
-                <div class="svc-row"><span class="svc-name">Laptop repair coordination</span><span class="svc-price">IDR 250K + repair</span></div>
-                <div class="svc-row"><span class="svc-name">VPN setup &amp; configuration</span><span class="svc-price">IDR 150K</span></div>
+                <div class="svc-row"><span class="svc-name">Phone repair coordination</span></div>
+                <div class="svc-row"><span class="svc-name">Laptop repair coordination</span></div>
+                <div class="svc-row"><span class="svc-name">Coworking &amp; meeting room booking</span></div>
+                <div class="svc-row"><span class="svc-name">Work desk &amp; chair rental<span class="svc-vendor">via Geko</span></span></div>
               </div>
             </div>
           </button>
@@ -473,13 +469,14 @@
           <button class="cat-card" aria-expanded="false" aria-controls="cat-9">
             <span class="cat-icon"><svg aria-hidden="true"><use href="#i-events"/></svg></span>
             <h3 class="cat-name">Events</h3>
-            <p class="cat-preview">Photographers, parties, anniversaries</p>
-            <div class="cat-foot"><span>3 services</span><span class="arrow">›</span></div>
+            <p class="cat-preview">Photographers, parties, flowers</p>
+            <div class="cat-foot"><span>4 services</span><span class="arrow">›</span></div>
             <div id="cat-9" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Photographer booking</span><span class="svc-price">IDR 500K + photog</span></div>
-                <div class="svc-row"><span class="svc-name">Videographer booking</span><span class="svc-price">IDR 500K + videog</span></div>
-                <div class="svc-row"><span class="svc-name">Birthday / anniversary</span><span class="svc-price">From IDR 1M</span></div>
+                <div class="svc-row"><span class="svc-name">Photographer &amp; videographer booking<span class="svc-vendor">via Risky</span></span></div>
+                <div class="svc-row"><span class="svc-name">Birthday / anniversary<span class="svc-vendor">via Adel</span></span></div>
+                <div class="svc-row"><span class="svc-name">Flower delivery</span></div>
+                <div class="svc-row"><span class="svc-name">Shisha rental &amp; delivery<span class="svc-vendor">via Eden Lounge, Canggu</span></span></div>
               </div>
             </div>
           </button>
@@ -487,13 +484,13 @@
           <button class="cat-card" aria-expanded="false" aria-controls="cat-10">
             <span class="cat-icon"><svg aria-hidden="true"><use href="#i-admin"/></svg></span>
             <h3 class="cat-name">Admin &amp; Financial</h3>
-            <p class="cat-preview">Bills, SIMs, cash</p>
+            <p class="cat-preview">Bills, SIMs, cash &amp; FX</p>
             <div class="cat-foot"><span>3 services</span><span class="arrow">›</span></div>
             <div id="cat-10" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Bill payments (PLN, PDAM, internet)</span><span class="svc-price">IDR 50K/month flat</span></div>
-                <div class="svc-row"><span class="svc-name">SIM activation &amp; top-ups</span><span class="svc-price">Cost + IDR 25K</span></div>
-                <div class="svc-row"><span class="svc-name">Cash &amp; FX coordination</span><span class="svc-price">1% spread</span></div>
+                <div class="svc-row"><span class="svc-name">Bill payments (PLN, PDAM, internet)</span></div>
+                <div class="svc-row"><span class="svc-name">SIM activation &amp; top-ups</span></div>
+                <div class="svc-row"><span class="svc-name">Cash &amp; FX coordination</span></div>
               </div>
             </div>
           </button>
@@ -501,14 +498,13 @@
           <button class="cat-card" aria-expanded="false" aria-controls="cat-11">
             <span class="cat-icon"><svg aria-hidden="true"><use href="#i-legal"/></svg></span>
             <h3 class="cat-name">Legal &amp; Documents</h3>
-            <p class="cat-preview">Translation, notary, contracts</p>
-            <div class="cat-foot"><span>4 services</span><span class="arrow">›</span></div>
+            <p class="cat-preview">Notary &amp; property help</p>
+            <div class="cat-foot"><span>3 services</span><span class="arrow">›</span></div>
             <div id="cat-11" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Sworn document translation</span><span class="svc-price">IDR 300K/page</span></div>
-                <div class="svc-row"><span class="svc-name">Notary coordination</span><span class="svc-price">IDR 500K + fees</span></div>
-                <div class="svc-row"><span class="svc-name">Apostille service</span><span class="svc-price">IDR 1M + gov fees</span></div>
-                <div class="svc-row"><span class="svc-name">Property lease review</span><span class="svc-price">IDR 1.5M (via lawyer)</span></div>
+                <div class="svc-row"><span class="svc-name">Notary coordination</span></div>
+                <div class="svc-row"><span class="svc-name">Villa agent introduction<span class="svc-vendor">via Diah</span></span></div>
+                <div class="svc-row"><span class="svc-name">Villa inspection</span></div>
               </div>
             </div>
           </button>
@@ -516,14 +512,15 @@
           <button class="cat-card" aria-expanded="false" aria-controls="cat-12">
             <span class="cat-icon"><svg aria-hidden="true"><use href="#i-pets"/></svg></span>
             <h3 class="cat-name">Pet Care</h3>
-            <p class="cat-preview">Vets, sitting, walking</p>
-            <div class="cat-foot"><span>4 services</span><span class="arrow">›</span></div>
+            <p class="cat-preview">Vets, sitting, walking, grooming</p>
+            <div class="cat-foot"><span>5 services</span><span class="arrow">›</span></div>
             <div id="cat-12" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Vet booking</span><span class="svc-price">IDR 200K + vet</span></div>
-                <div class="svc-row"><span class="svc-name">Pet sitting (per day)</span><span class="svc-price">IDR 250K</span></div>
-                <div class="svc-row"><span class="svc-name">Dog walking (per walk)</span><span class="svc-price">IDR 150K</span></div>
-                <div class="svc-row"><span class="svc-name">Pet supplies sourcing</span><span class="svc-price">IDR 100K + cost</span></div>
+                <div class="svc-row"><span class="svc-name">Vet booking<span class="svc-vendor">via Semer Vet Care &amp; Island Vet, Berawa</span></span></div>
+                <div class="svc-row"><span class="svc-name">Pet sitting (per day)<span class="svc-vendor">via Shandy</span></span></div>
+                <div class="svc-row"><span class="svc-name">Dog walking (per walk)<span class="svc-vendor">via Shandy</span></span></div>
+                <div class="svc-row"><span class="svc-name">Pet supplies sourcing<span class="svc-vendor">via Shandy</span></span></div>
+                <div class="svc-row"><span class="svc-name">Pet grooming booking<span class="svc-vendor">via Septa</span></span></div>
               </div>
             </div>
           </button>
@@ -579,12 +576,12 @@
 
           <ul class="price-list">
             <li>Cancel anytime, no contracts</li>
-            <li>Services billed at published rates, nothing hidden</li>
+            <li>Every job quoted in chat before you confirm, nothing hidden</li>
             <li>First service free when you join</li>
             <li>Add household members at no extra cost</li>
           </ul>
 
-          <a class="btn btn-large" href="https://wa.me/6281234567890?text=Hi%20Widya%2C%20I%27d%20like%20to%20sign%20up%20%F0%9F%8C%B4&amp;utm_source=widya.co&amp;utm_medium=web&amp;utm_campaign=pricing" target="_blank" rel="noopener">
+          <a class="btn btn-large" href="https://wa.me/628216338492?text=Hi%20Widya%2C%20I%27d%20like%20to%20sign%20up%20%F0%9F%8C%B4&amp;utm_source=widya.co&amp;utm_medium=web&amp;utm_campaign=pricing" target="_blank" rel="noopener">
             <svg class="btn-icon" aria-hidden="true"><use href="#i-wa"/></svg>
             Claim a founder spot →
           </a>
@@ -640,7 +637,7 @@
               <span class="plus" aria-hidden="true"></span>
             </button>
             <div class="faq-a" id="a3" role="region">
-              <div class="faq-a-inner">It's your monthly membership. It gives you access to the platform and unlimited messaging. Specific services (bike service, doctor visits, etc.) are billed separately at the published rates. You only pay for what you use, on top of the membership.</div>
+              <div class="faq-a-inner">It's your monthly membership. It gives you access to the platform and unlimited messaging. Specific services (bike service, doctor visits, etc.) are billed separately — you get the exact price in chat before anything's confirmed. You only pay for what you use, on top of the membership.</div>
             </div>
           </div>
 
@@ -711,7 +708,7 @@
         </div>
         <div class="footer-col">
           <h4>Get in touch</h4>
-          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">WhatsApp: +62 [number]</a>
+          <a href="https://wa.me/628216338492" target="_blank" rel="noopener">WhatsApp: +62 821-6338-492</a>
           <a href="mailto:hello@widya.co">hello@widya.co</a>
         </div>
         <div class="footer-col">
@@ -728,7 +725,7 @@
 
   <!-- MOBILE STICKY CTA -->
   <div class="sticky-cta">
-    <a class="btn" href="https://wa.me/6281234567890?text=Hi%20Widya%2C%20I%27d%20like%20to%20sign%20up%20%F0%9F%8C%B4&amp;utm_source=widya.co&amp;utm_medium=web&amp;utm_campaign=sticky-mobile" target="_blank" rel="noopener">
+    <a class="btn" href="https://wa.me/628216338492?text=Hi%20Widya%2C%20I%27d%20like%20to%20sign%20up%20%F0%9F%8C%B4&amp;utm_source=widya.co&amp;utm_medium=web&amp;utm_campaign=sticky-mobile" target="_blank" rel="noopener">
       <svg class="btn-icon" aria-hidden="true"><use href="#i-wa"/></svg>
       Start on WhatsApp
     </a>
