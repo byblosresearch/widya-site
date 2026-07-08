@@ -28,7 +28,7 @@ site/
 
 ## Editing content
 
-- **Catalogue (categories, services)** — edit the `.cat-card` blocks inside `index.html` under `<section id="catalogue">`. Each card lists service rows; an optional `.svc-vendor` span under the name shows the vendor ("via Baik Wash"). Only services with a confirmed vendor in `widya-vendor-directory-2.xlsx` (the source of truth) are listed — last sync 2026-07-08. Per-service prices are deliberately not published on the site; they're quoted in chat. Update the card's service count in `.cat-foot` when adding/removing rows.
+- **Catalogue (categories, services)** — edit the `.cat-card` blocks inside `index.html` under `<section id="catalogue">`. Each card lists service rows (service name only). The service list is derived from `widya-vendor-directory-2.xlsx` (the internal source of truth mapping each service to its vendor). **Never put vendor/provider names or per-service prices on the public site** — that's competitive info; prices are quoted in chat. Update the card's service count in `.cat-foot` when adding/removing rows.
 - **FAQ** — edit the `.faq-item` blocks inside `<section id="faq">`.
 - **Pricing / founder counter** — edit the `.hero-price`, `.founder-badge`, and `.founder-panel` blocks. Two places to update the counter: hero badge and pricing card.
 - **WhatsApp number** — currently `628216338492` (+62 821-6338-492). Search-and-replace it across `index.html` and `404.html` to change. There are five WhatsApp deep links in index (hero, topnav, pricing, footer, sticky-mobile) plus two in the 404, and the footer display text. All use the pre-filled message: `Hi Widya, I'd like to sign up 🌴`.

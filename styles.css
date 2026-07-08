@@ -524,7 +524,6 @@ h3 {
 }
 .svc-row:last-child { border-bottom: none; }
 .svc-name { font-size: 15px; color: var(--text-deep); }
-.svc-vendor { display: block; font-size: 13px; color: var(--text-muted); margin-top: 2px; }
 
 .cat-foot-note {
   text-align: center;

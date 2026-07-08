@@ -282,7 +282,7 @@
                     <div class="bubble you">Need bike service tomorrow</div>
                   </div>
                   <div class="bubble-row">
-                    <div class="bubble widya"><span class="name">Widya</span>On it. Baik Wash will pick up your NMAX at 9am. Last service was January so I'll book the full service. IDR 750K, added to your bill when done. Cool?</div>
+                    <div class="bubble widya"><span class="name">Widya</span>On it. Pak Wayan will pick up your NMAX at 9am. Last service was January so I'll do the full check. ~IDR 280K, added to your bill when done. Cool?</div>
                   </div>
                   <div class="bubble-row right">
                     <div class="bubble you">👍</div>
@@ -308,7 +308,7 @@
                     <div class="bubble you">AC in the bedroom is dripping</div>
                   </div>
                   <div class="bubble-row">
-                    <div class="bubble widya"><span class="name">Widya</span>Sending Budiarta over today, he can be there 2pm. Standard service IDR 200K, parts if needed extra. Sound good?</div>
+                    <div class="bubble widya"><span class="name">Widya</span>Sending Made over today, he can be there 2pm. Standard service IDR 200K, parts if needed extra. Sound good?</div>
                   </div>
                   <div class="bubble-row right">
                     <div class="bubble you">Yes</div>
@@ -332,10 +332,11 @@
         </div>
 
         <!--
-          NOTE TO SAM: services + vendors synced from widya-vendor-directory-2.xlsx
-          (source of truth) on 2026-07-08. Only services with a confirmed vendor
-          (or handled by Widya directly) are listed. Per-service prices are
-          intentionally not published — they're quoted in chat before booking.
+          NOTE TO SAM: service list derived from widya-vendor-directory-2.xlsx
+          (source of truth). Vendor/provider names are deliberately NEVER shown
+          on the public site — that's competitive info. Per-service prices are
+          also not published; they're quoted in chat before booking.
+          The directory stays the internal mapping of service -> vendor.
           They live in /data/catalogue.json once migrated to Astro.
         -->
         <div class="cat-grid fade-in">
@@ -347,14 +348,14 @@
             <div class="cat-foot"><span>8 services</span><span class="arrow">›</span></div>
             <div id="cat-1" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Bike service (full)<span class="svc-vendor">via Baik Wash</span></span></div>
-                <div class="svc-row"><span class="svc-name">Bike service (quick check)<span class="svc-vendor">via Baik Wash</span></span></div>
-                <div class="svc-row"><span class="svc-name">Bike repair (call-out)<span class="svc-vendor">via Baik Wash</span></span></div>
-                <div class="svc-row"><span class="svc-name">STNK &amp; SIM renewal<span class="svc-vendor">via Echa</span></span></div>
-                <div class="svc-row"><span class="svc-name">Driver (half day, 6 hrs)<span class="svc-vendor">via Ahmat</span></span></div>
-                <div class="svc-row"><span class="svc-name">Driver (full day, 10 hrs)<span class="svc-vendor">via Ahmat</span></span></div>
-                <div class="svc-row"><span class="svc-name">Airport transfer (one way)<span class="svc-vendor">via Ahmat</span></span></div>
-                <div class="svc-row"><span class="svc-name">Bike/car rental sourcing<span class="svc-vendor">via Echa</span></span></div>
+                <div class="svc-row"><span class="svc-name">Bike service (full)</span></div>
+                <div class="svc-row"><span class="svc-name">Bike service (quick check)</span></div>
+                <div class="svc-row"><span class="svc-name">Bike repair (call-out)</span></div>
+                <div class="svc-row"><span class="svc-name">STNK &amp; SIM renewal</span></div>
+                <div class="svc-row"><span class="svc-name">Driver (half day, 6 hrs)</span></div>
+                <div class="svc-row"><span class="svc-name">Driver (full day, 10 hrs)</span></div>
+                <div class="svc-row"><span class="svc-name">Airport transfer (one way)</span></div>
+                <div class="svc-row"><span class="svc-name">Bike/car rental sourcing</span></div>
               </div>
             </div>
           </button>
@@ -366,36 +367,39 @@
             <div class="cat-foot"><span>9 services</span><span class="arrow">›</span></div>
             <div id="cat-2" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">GP appointment booking<span class="svc-vendor">via Prodia, Tabanan</span></span></div>
+                <div class="svc-row"><span class="svc-name">GP appointment booking</span></div>
                 <div class="svc-row"><span class="svc-name">Specialist booking</span></div>
                 <div class="svc-row"><span class="svc-name">Hospital navigation</span></div>
                 <div class="svc-row"><span class="svc-name">Pharmacy delivery</span></div>
-                <div class="svc-row"><span class="svc-name">Lab tests / annual checkup<span class="svc-vendor">via Prodia, Tabanan</span></span></div>
-                <div class="svc-row"><span class="svc-name">Dentist booking<span class="svc-vendor">via Hydro Dental, Batu Bolong</span></span></div>
-                <div class="svc-row"><span class="svc-name">Insurance claim liaison<span class="svc-vendor">via Bu Fajar (Allianz)</span></span></div>
-                <div class="svc-row"><span class="svc-name">IV drip therapy booking<span class="svc-vendor">via Pharmacy Bali 24/7</span></span></div>
-                <div class="svc-row"><span class="svc-name">Physiotherapy booking<span class="svc-vendor">via Made Widnyana</span></span></div>
+                <div class="svc-row"><span class="svc-name">Lab tests / annual checkup</span></div>
+                <div class="svc-row"><span class="svc-name">Dentist booking</span></div>
+                <div class="svc-row"><span class="svc-name">Insurance claim liaison</span></div>
+                <div class="svc-row"><span class="svc-name">IV drip therapy booking</span></div>
+                <div class="svc-row"><span class="svc-name">Physiotherapy booking</span></div>
               </div>
             </div>
           </button>
 
           <button class="cat-card" aria-expanded="false" aria-controls="cat-3">
             <span class="cat-icon"><svg aria-hidden="true"><use href="#i-home"/></svg></span>
-            <h3 class="cat-name">Household Repairs</h3>
-            <p class="cat-preview">AC, plumbing, cleaning, laundry</p>
-            <div class="cat-foot"><span>10 services</span><span class="arrow">›</span></div>
+            <h3 class="cat-name">Home &amp; Cleaning</h3>
+            <p class="cat-preview">Repairs, cleaning, laundry &amp; care</p>
+            <div class="cat-foot"><span>13 services</span><span class="arrow">›</span></div>
             <div id="cat-3" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">AC servicing (clean &amp; check)<span class="svc-vendor">via Budiarta</span></span></div>
-                <div class="svc-row"><span class="svc-name">Plumbing repairs<span class="svc-vendor">via Diah</span></span></div>
-                <div class="svc-row"><span class="svc-name">Electrical repairs<span class="svc-vendor">via I Gede Ardana</span></span></div>
-                <div class="svc-row"><span class="svc-name">Internet troubleshooting<span class="svc-vendor">via GlobalXtreme</span></span></div>
-                <div class="svc-row"><span class="svc-name">Pest control treatment<span class="svc-vendor">via Diah</span></span></div>
+                <div class="svc-row"><span class="svc-name">AC servicing (clean &amp; check)</span></div>
+                <div class="svc-row"><span class="svc-name">Plumbing repairs</span></div>
+                <div class="svc-row"><span class="svc-name">Electrical repairs</span></div>
+                <div class="svc-row"><span class="svc-name">Internet troubleshooting</span></div>
+                <div class="svc-row"><span class="svc-name">Pest control treatment</span></div>
                 <div class="svc-row"><span class="svc-name">Locksmith (call-out)</span></div>
-                <div class="svc-row"><span class="svc-name">Cleaning / housekeeping<span class="svc-vendor">via Rini</span></span></div>
-                <div class="svc-row"><span class="svc-name">Laundry pickup &amp; delivery<span class="svc-vendor">via Samaha Laundry</span></span></div>
-                <div class="svc-row"><span class="svc-name">Water gallon delivery<span class="svc-vendor">via Alfagift</span></span></div>
-                <div class="svc-row"><span class="svc-name">Moving assistance (driver + helper)<span class="svc-vendor">via Sabil</span></span></div>
+                <div class="svc-row"><span class="svc-name">Water gallon delivery</span></div>
+                <div class="svc-row"><span class="svc-name">Moving assistance (driver + helper)</span></div>
+                <div class="svc-row"><span class="svc-name">Home cleaning / housekeeping</span></div>
+                <div class="svc-row"><span class="svc-name">Laundry pickup &amp; delivery</span></div>
+                <div class="svc-row"><span class="svc-name">Shoe cleaning</span></div>
+                <div class="svc-row"><span class="svc-name">Bag cleaning</span></div>
+                <div class="svc-row"><span class="svc-name">Yoga mat cleaning</span></div>
               </div>
             </div>
           </button>
@@ -409,12 +413,12 @@
               <div class="cat-services-inner">
                 <div class="svc-row"><span class="svc-name">Restaurant reservations</span></div>
                 <div class="svc-row"><span class="svc-name">Recommendations &amp; curation</span></div>
-                <div class="svc-row"><span class="svc-name">Personal chef (weekly, all-in)<span class="svc-vendor">via Made Chef</span></span></div>
-                <div class="svc-row"><span class="svc-name">Catering coordination<span class="svc-vendor">via Made Chef</span></span></div>
+                <div class="svc-row"><span class="svc-name">Personal chef (weekly, all-in)</span></div>
+                <div class="svc-row"><span class="svc-name">Catering coordination</span></div>
                 <div class="svc-row"><span class="svc-name">Specialty grocery sourcing</span></div>
                 <div class="svc-row"><span class="svc-name">Cakes &amp; event food</span></div>
                 <div class="svc-row"><span class="svc-name">Beach club reservations</span></div>
-                <div class="svc-row"><span class="svc-name">Alcohol delivery coordination<span class="svc-vendor">via GoDrinks</span></span></div>
+                <div class="svc-row"><span class="svc-name">Alcohol delivery coordination</span></div>
               </div>
             </div>
           </button>
@@ -426,11 +430,11 @@
             <div class="cat-foot"><span>5 services</span><span class="arrow">›</span></div>
             <div id="cat-5" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Massage &amp; waxing booking<span class="svc-vendor">via Kantri</span></span></div>
-                <div class="svc-row"><span class="svc-name">Muay Thai personal trainer (per session)<span class="svc-vendor">via Surya</span></span></div>
+                <div class="svc-row"><span class="svc-name">Massage &amp; waxing booking</span></div>
+                <div class="svc-row"><span class="svc-name">Muay Thai personal trainer (per session)</span></div>
                 <div class="svc-row"><span class="svc-name">Yoga / pilates / BJJ studio</span></div>
-                <div class="svc-row"><span class="svc-name">Hair, barber, nails, waxing<span class="svc-vendor">via Dadia &amp; Dewi</span></span></div>
-                <div class="svc-row"><span class="svc-name">Sound healing / breathwork classes<span class="svc-vendor">via Chitra</span></span></div>
+                <div class="svc-row"><span class="svc-name">Hair, barber, nails, waxing</span></div>
+                <div class="svc-row"><span class="svc-name">Sound healing / breathwork classes</span></div>
               </div>
             </div>
           </button>
@@ -442,10 +446,10 @@
             <div class="cat-foot"><span>5 services</span><span class="arrow">›</span></div>
             <div id="cat-7" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Indonesian language tutor<span class="svc-vendor">via Tom &amp; Elsa</span></span></div>
-                <div class="svc-row"><span class="svc-name">Surf coaching (per session)<span class="svc-vendor">via Coach Jambul</span></span></div>
-                <div class="svc-row"><span class="svc-name">Music teacher (per hour)<span class="svc-vendor">via Indice Music Course</span></span></div>
-                <div class="svc-row"><span class="svc-name">Cooking class booking<span class="svc-vendor">via Nia Cooking Class, Seminyak</span></span></div>
+                <div class="svc-row"><span class="svc-name">Indonesian language tutor</span></div>
+                <div class="svc-row"><span class="svc-name">Surf coaching (per session)</span></div>
+                <div class="svc-row"><span class="svc-name">Music teacher (per hour)</span></div>
+                <div class="svc-row"><span class="svc-name">Cooking class booking</span></div>
                 <div class="svc-row"><span class="svc-name">Tutor sourcing (school subjects)</span></div>
               </div>
             </div>
@@ -461,7 +465,7 @@
                 <div class="svc-row"><span class="svc-name">Phone repair coordination</span></div>
                 <div class="svc-row"><span class="svc-name">Laptop repair coordination</span></div>
                 <div class="svc-row"><span class="svc-name">Coworking &amp; meeting room booking</span></div>
-                <div class="svc-row"><span class="svc-name">Work desk &amp; chair rental<span class="svc-vendor">via Geko</span></span></div>
+                <div class="svc-row"><span class="svc-name">Work desk &amp; chair rental</span></div>
               </div>
             </div>
           </button>
@@ -473,10 +477,10 @@
             <div class="cat-foot"><span>4 services</span><span class="arrow">›</span></div>
             <div id="cat-9" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Photographer &amp; videographer booking<span class="svc-vendor">via Risky</span></span></div>
-                <div class="svc-row"><span class="svc-name">Birthday / anniversary<span class="svc-vendor">via Adel</span></span></div>
+                <div class="svc-row"><span class="svc-name">Photographer &amp; videographer booking</span></div>
+                <div class="svc-row"><span class="svc-name">Birthday / anniversary</span></div>
                 <div class="svc-row"><span class="svc-name">Flower delivery</span></div>
-                <div class="svc-row"><span class="svc-name">Shisha rental &amp; delivery<span class="svc-vendor">via Eden Lounge, Canggu</span></span></div>
+                <div class="svc-row"><span class="svc-name">Shisha rental &amp; delivery</span></div>
               </div>
             </div>
           </button>
@@ -503,7 +507,7 @@
             <div id="cat-11" class="cat-services">
               <div class="cat-services-inner">
                 <div class="svc-row"><span class="svc-name">Notary coordination</span></div>
-                <div class="svc-row"><span class="svc-name">Villa agent introduction<span class="svc-vendor">via Diah</span></span></div>
+                <div class="svc-row"><span class="svc-name">Villa agent introduction</span></div>
                 <div class="svc-row"><span class="svc-name">Villa inspection</span></div>
               </div>
             </div>
@@ -516,11 +520,11 @@
             <div class="cat-foot"><span>5 services</span><span class="arrow">›</span></div>
             <div id="cat-12" class="cat-services">
               <div class="cat-services-inner">
-                <div class="svc-row"><span class="svc-name">Vet booking<span class="svc-vendor">via Semer Vet Care &amp; Island Vet, Berawa</span></span></div>
-                <div class="svc-row"><span class="svc-name">Pet sitting (per day)<span class="svc-vendor">via Shandy</span></span></div>
-                <div class="svc-row"><span class="svc-name">Dog walking (per walk)<span class="svc-vendor">via Shandy</span></span></div>
-                <div class="svc-row"><span class="svc-name">Pet supplies sourcing<span class="svc-vendor">via Shandy</span></span></div>
-                <div class="svc-row"><span class="svc-name">Pet grooming booking<span class="svc-vendor">via Septa</span></span></div>
+                <div class="svc-row"><span class="svc-name">Vet booking</span></div>
+                <div class="svc-row"><span class="svc-name">Pet sitting (per day)</span></div>
+                <div class="svc-row"><span class="svc-name">Dog walking (per walk)</span></div>
+                <div class="svc-row"><span class="svc-name">Pet supplies sourcing</span></div>
+                <div class="svc-row"><span class="svc-name">Pet grooming booking</span></div>
               </div>
             </div>
           </button>
@@ -709,14 +713,12 @@
         <div class="footer-col">
           <h4>Get in touch</h4>
           <a href="https://wa.me/628216338492" target="_blank" rel="noopener">WhatsApp: +62 821-6338-492</a>
-          <a href="mailto:hello@widya.co">hello@widya.co</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
           <a href="#">Terms of service</a>
           <a href="#">Privacy policy</a>
-          <p class="muted">PT Widya Bali Konsultan</p>
-          <p class="muted">NIB: [TBD]</p>
+          <p class="muted">PT Good Life Services</p>
         </div>
       </div>
       <div class="footer-strip">© 2026 Widya. Made with care in Bali.</div>
