@@ -1029,6 +1029,11 @@ h3 {
 .nanny-offer .btn { white-space: nowrap; justify-self: start; }
 @media (min-width: 1024px) { .nanny-offer .btn { justify-self: end; } }
 
+/* ---------- Pricing: nanny re-CTA card ---------- */
+.price-card--nanny { margin-top: 24px; }
+.price-main--sm { font-size: 44px; }
+@media (min-width: 1024px) { .price-main--sm { font-size: 52px; } }
+
 /* ---------- Pricing additions ---------- */
 .price-intro {
   margin: 16px auto 0;
