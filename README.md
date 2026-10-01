@@ -38,7 +38,9 @@ site/
 
 These are flagged inline in the markup. Search for them when you're ready:
 - PT registration name and NIB
-- Founder counter starting number (`12 of 20`)
+- Pricing mechanic uses the "first 10 members" model: `IDR 699K` locked for life, then `IDR 899K` standard, plus `IDR 300K` first-member credit. Confirm the 899K and 300K figures before launch (search the Pricing and Hero sections).
+- First-member spots counter: currently uses the honest non-numeric line "Only 10 first-member spots ... before it goes up" (hero `.scarcity` and pricing `.founder-panel .count`). Swap in a real "X of 10 left" only if you'll keep the count truthful.
+- Nanny intros pricing (`IDR 5M` for 3 vetted intros, `IDR 1M` per extra) lives in `<section id="nanny">` and the "How do nanny intros work?" FAQ. This is Widya's own packaged fee, so it's the one per-service price that IS published.
 - Terms of service + Privacy policy text
 - Analytics (Plausible toggle, deferred)
 
